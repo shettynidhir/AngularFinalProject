@@ -1,0 +1,50 @@
+.ques
+{
+    width:500px;
+    margin-top: 50px;
+    /* border: 2px solid red; */
+}
+
+
+
+#postbtn
+{
+    width:200px;
+ 
+}
+.example-card {
+  
+    width:600px;
+    /* align-items: center; */
+    padding:20px;
+   
+  }
+  
+
+  .product_card
+{
+    float: left;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    margin: 20px;
+    margin-left:350px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+.example-card2
+{
+    width:100%;
+    height: fit-content;
+}
+li
+{
+    list-style-type: none;
+}
+#errordiv
+{
+    margin-left: 15px;
+}

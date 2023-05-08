@@ -1,0 +1,21 @@
+<app-menubar></app-menubar>
+<!-- <div class="bg"> -->
+  <mat-form-field class="dropdown" appearance="fill">
+  <mat-label>Filter by Cateogry</mat-label>
+  <mat-select [(ngModel)]="selected">
+    <mat-option *ngFor="let x of types" [value]="x">
+      {{x}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="searchbar" appearance="fill">
+<input matInput [(ngModel)]="searched" placeholder="Search">
+</mat-form-field>
+
+<div class="prdisplay">
+<app-prod *ngFor="let x of products | typefilter:selected | typesearch:searched" [prod]="x"></app-prod>
+</div>
+
+
+<!-- </div> -->

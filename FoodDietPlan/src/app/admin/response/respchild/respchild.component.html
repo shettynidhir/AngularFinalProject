@@ -1,0 +1,15 @@
+<div class="product_card">
+    <mat-card class="example-card">
+            <mat-card-content>{{Ques.question}}</mat-card-content>
+            <mat-form-field class="ques" appearance="outline">
+                <textarea matInput [(ngModel)]="answer"></textarea>
+              </mat-form-field>
+        <button mat-raised-button color="primary" (click)="submit()" id="postbtn" type="submit">Post Answer</button>
+    </mat-card>
+    <div class="alert alert-danger" id="errordiv" role="alert" *ngIf="errors.length>0">
+        <ul >
+            <li *ngFor="let x of errors">{{x}}</li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+.example-card {
+  
+    width:300px;
+    height: 300px;
+   
+  }
+  .img
+  {
+    text-align: center;
+  }
+
+  .product_card
+{
+    float: left;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 20px;
+ 
+    margin-left:60px;
+    cursor: pointer;
+    
+}
+mat-card-title
+{
+    display: flex;
+    justify-content:center;
+}

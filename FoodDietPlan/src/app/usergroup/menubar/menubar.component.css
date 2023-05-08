@@ -1,0 +1,40 @@
+ul{
+    margin-left: 150px;
+    display: flex;
+    margin-top:23px;
+}
+li {
+    float: left;
+    list-style-type: none;
+     margin-left: 40px;
+    
+}
+.uname
+{
+   
+    background-color: black;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: normal;
+    padding:8px;
+}
+.title
+{
+    background-color: black;
+    border-radius: 5%;
+    font-size: medium;
+    
+    padding:8px;
+}
+
+a {
+    color: whitesmoke;
+   size:10px;
+    text-decoration: none;
+    cursor: pointer;
+  
+}
+mat-icon
+{
+    font-size:25px;
+}

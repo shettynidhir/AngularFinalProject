@@ -1,0 +1,19 @@
+<mat-toolbar class="bg-warning text-white">
+    <div class="title">
+        <span>FitPro Inc</span>
+    </div>
+ 
+    <ul>
+        <li><a routerLink="/products"><button mat-fab color="white"><mat-icon>home</mat-icon></button></a></li>
+        <li><a routerLink="/dietplan"><button mat-raised-button>Diet Plan</button></a></li>
+        <li><a routerLink="/consultexp"><button mat-raised-button>Consult Expert</button></a></li>
+        <li><a routerLink="/plandiet"><button mat-raised-button>Plan you diet</button></a></li>
+        <li><a routerLink="/"><button mat-raised-button (click)="logout()">Logout</button></a></li>
+        <li style="margin-left:100px"><div class="uname">Hello, {{this.uname}} </div></li>
+       
+       
+    </ul>
+   
+  </mat-toolbar>
+
+ 

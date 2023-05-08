@@ -1,0 +1,94 @@
+<div class="main" *ngIf="logform">
+  <div class="one">
+
+  </div>
+  <div class="two">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-form-field appearance="outline">
+          <input matInput placeholder="Email id" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+     
+          <input [(ngModel)]="password" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+        </mat-form-field>
+       
+          <button class="btn btn-primary" (click)="login()" type="submit" id="postbtn">Login</button>
+          <div class="below">
+      <a><mat-label class="link" (click)="change()">Need to SignUp? Click here</mat-label></a>  
+
+        </div>
+        
+  </mat-card>
+  
+  <div class="alert alert-danger" role="alert" *ngIf="errors.length>0" >
+    <ul >
+        <li>{{errors}}</li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+<!-- Registration -->
+
+<div class="main" *ngIf="!logform">
+  <div class="one">
+
+  </div>
+  <div class="reg-two">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Sign up</mat-card-title>
+      </mat-card-header>
+      <mat-form-field appearance="outline">
+        <input matInput [(ngModel)]="rname" placeholder="Name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput [(ngModel)]="rphone" placeholder="Phone no">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput [(ngModel)]="remail" placeholder="Email id" [(ngModel)]="email">
+      </mat-form-field>
+
+
+
+        <mat-form-field appearance="outline">
+          <input [(ngModel)]="rpass" placeholder="Set Password" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input [(ngModel)]="rcpass" placeholder="Confirm Password" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+        </mat-form-field>
+
+
+        <button class="btn btn-primary" (click)="register()" type="submit" id="postbtn">Register</button>
+  </mat-card>
+  
+  <div class="alert alert-danger" role="alert" *ngIf="rerrors.length>0" >
+    <ul >
+        <li>{{rerrors}}</li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+

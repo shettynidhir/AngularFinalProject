@@ -1,0 +1,19 @@
+ul{
+    margin-left: 500px;
+    display: flex;
+    margin-top:23px;
+}
+li {
+    float: left;
+    list-style-type: none;
+     margin-left: 40px;
+    
+}
+
+a {
+    color: whitesmoke;
+   size:10px;
+    text-decoration: none;
+    cursor: pointer;
+  
+}

@@ -1,0 +1,43 @@
+<app-menubar></app-menubar>
+<div class="division">
+    <div class="dropdown">
+        <mat-form-field appearance="fill">
+            <mat-label>Select Products</mat-label>
+            <mat-select [(ngModel)]="selected">
+              <mat-option *ngFor="let x of products" [value]="x.Food">
+                {{x.Food}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+    </div>
+    <div class="dropdown">
+        <mat-form-field class="quandrp" appearance="fill">
+            <mat-label>Select Quantity</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let x of quantity" [value]="x">
+                {{x}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="btn">
+        <button class="btn btn-primary" id="postbtn">Calculate</button>
+    </div>
+    
+   
+</div>
+
+    <div class="prdisp" *ngFor="let x of products">
+        <app-disp-prod *ngIf="x.Food==selected"  [prod]="x"></app-disp-prod>
+    </div>
+    
+       
+        
+    
+
+
+
+
+
+ 

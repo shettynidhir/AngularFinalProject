@@ -1,0 +1,34 @@
+.dropdown
+{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.division
+{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+  
+}
+mat-form-field
+{
+    padding:20px;
+}
+.prdisp
+{
+    margin-left: 30px;
+}
+
+.quandrp
+{
+    margin-left:200px;
+}
+.btn
+{
+    margin-left:100px;
+    margin-top: 10px;
+    border-radius: 20px;
+   
+}

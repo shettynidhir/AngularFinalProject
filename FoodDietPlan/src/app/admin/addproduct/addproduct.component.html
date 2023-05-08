@@ -1,0 +1,67 @@
+
+
+    <form [formGroup]="addproduct" (submit)="saveProd()">
+      <mat-card class="example-card">
+        <div class="fields">
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="Name of the product" formControlName="Food">
+          </mat-form-field>
+          <mat-form-field class="dropdown" appearance="fill">
+              <mat-label>Filter by Cateogry</mat-label>
+              <mat-select formControlName="Category">
+                <mat-option *ngFor="let x of types" [value]="x">
+                  {{x}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+        </div>
+         
+           <div class="fields">
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="Measure" placeholder="Measure">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="Grams" placeholder="Grams">
+            </mat-form-field>
+
+           </div>
+            
+           <div class="fields">
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="Calories" placeholder="Calories">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="Protein" placeholder="Protein">
+            </mat-form-field>
+
+           </div>
+
+           <div class="fields">
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="Fat" placeholder="Fat">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input matInput formControlName="SatFat" placeholder="SatFat">
+            </mat-form-field>
+
+           </div>
+          
+            <div class="fields">
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="Fiber" placeholder="Fiber">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="Carbs" placeholder="Carbs">
+              </mat-form-field>
+
+            </div>
+
+            <div class="fields">
+              <input type="file" #image class="img" accept="image/*" (change)="uploadimg(image)">
+            </div>
+           
+            <button class="btn btn-primary"  [mat-dialog-close]="true" type="submit" [disabled]="!addproduct.valid" id="postbtn">Add</button>
+      </mat-card>
+    </form>
+  

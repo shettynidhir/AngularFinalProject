@@ -1,0 +1,10 @@
+<mat-card class="example-card">
+    <mat-card-content>
+        <div *ngFor="let x of answers">
+            <div *ngIf="this.id==x.qid">
+                <p>{{x.answer}}</p>
+            </div>
+        </div>
+    </mat-card-content>
+    <button class="btn btn-primary" [mat-dialog-close]="true" id="postbtn">Close</button>
+</mat-card>
