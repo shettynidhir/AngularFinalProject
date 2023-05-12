@@ -1,0 +1,17 @@
+<app-menubar></app-menubar>
+
+
+  <app-forumbox *ngFor="let x of comments" [comments]="x"></app-forumbox>
+
+<div class="product_card">
+    <form [formGroup]="forumques" (submit)="saveQues()">
+       <mat-form-field class="ques" appearance="outline">
+          <mat-label>Ask your queries..</mat-label> 
+          <textarea matInput formControlName="comment"></textarea>
+        </mat-form-field>
+        <button style="margin-left:20px" class="btn btn-primary" type="submit" id="postbtn">Post</button> 
+    </form>
+  </div> 
+
+
+

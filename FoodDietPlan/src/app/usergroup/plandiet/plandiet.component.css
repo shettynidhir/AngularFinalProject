@@ -5,6 +5,52 @@
     margin: 0;
     padding: 0;
 }
+.display
+{
+    width:500px;
+    margin-left:300px;
+    margin-top:20px;
+    display: flex;
+    
+}
+.div1
+{
+    border:2px solid red;
+}
+.div2
+{
+    border:2px solid green;
+}
+
+.dispcard
+{
+    text-align: center;
+   padding:50px;
+   background-color: black;
+   color: white;
+
+}
+
+.title
+{
+    display:flex; 
+}
+.dispcard1
+{
+    text-align: center;
+   padding:30px;
+   margin-left: 40px;
+   background-color: black;
+   color: white;
+   width: 300px;
+
+}
+
+
+td{
+    color:white;
+}
+
 .division
 {
     display: flex;

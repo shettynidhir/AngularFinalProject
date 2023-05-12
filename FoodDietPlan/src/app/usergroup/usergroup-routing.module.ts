@@ -8,6 +8,7 @@ import { ConsultexpertComponent } from './consultexpert/consultexpert.component'
 import { AnswerComponent } from './consultexpert/answer/answer.component';
 import { QuestionComponent } from './consultexpert/question/question.component';
 import { PlandietComponent } from './plandiet/plandiet.component';
+import { ForumComponent } from './forum/forum.component';
 
 const routes: Routes = [
   // {path:"",component:ProductsComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"consultexp",component:ConsultexpertComponent},
   {path:"answer/:id",component:AnswerComponent},
   {path:"expert",component:ConsultexpertComponent},
-  {path:"plandiet",component:PlandietComponent}
+  {path:"plandiet",component:PlandietComponent},
+  {path:"forum",component:ForumComponent}
 ];
 
 @NgModule({

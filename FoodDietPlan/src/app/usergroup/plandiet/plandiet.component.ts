@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MainserviceService } from 'src/app/services/mainservice.service';
 
+
 @Component({
   selector: 'app-plandiet',
   templateUrl: './plandiet.component.html',
@@ -8,21 +9,17 @@ import { MainserviceService } from 'src/app/services/mainservice.service';
 })
 export class PlandietComponent {
   products:any;
-  selected:any;
-  txtarea:any;
-  quanselect:any;
-  quantity:any[]=[
-    "1 qt",
-    "1/2 cup",
-    "1 cup",
-    "2 cups",
-    "1T.",
-    "1 slice",
-    "1 oz",
-    "2 oz",
-    "3 oz",
-    "1 pie"
-  ]
+  selectprod:any;
+  quan:any;
+  quantity:any=[]
+  selected:any=[]
+  calorie:number=0;
+  protein:number=0;
+  fat:number=0;
+  satfat:number=0;
+  fiber:number=0;
+  carbs:number=0;
+ 
   constructor(private prd:MainserviceService)
   {
     this.prd.getProducts().subscribe(
@@ -32,13 +29,30 @@ export class PlandietComponent {
           this.products=data
           console.log(data)
         },
-       
         error:()=>this.products=[]
       }
     )
-      
+  }
 
-   
+  calc()
+  { 
+   this.selected.push(this.selectprod)
+   this.quantity.push(this.quan)
+    for(let x of this.products)
+    {
+      if(x.Food==this.selectprod)
+      {
+        this.calorie+=x.Calories
+        this.protein+=x.Protein
+        this.fat+=x.Fat
+        this.satfat+=x.SatFat
+        this.fiber+=x.Fiber
+        this.carbs+=x.Carbs
+     
+      }
+
+    }
+
   }
 
 }

@@ -1,33 +1,35 @@
 <app-menubar></app-menubar>
-
-
-<div class="product_card">
-  <form [formGroup]="consultexp" (submit)="saveQues()">
-    <mat-card class="example-card">
-      <!-- <mat-form-field  appearance="outline">
-        <input matInput  formControlName="userid">
-      </mat-form-field> -->
-      <mat-form-field class="ques" appearance="outline">
-        <mat-label>Post your question</mat-label>
-       
-        <textarea matInput formControlName="question"></textarea>
-      </mat-form-field>
-      <button class="btn btn-primary" type="submit" id="postbtn">Post</button>
+<div class="card">
+  <div class="product_card">
+    <form [formGroup]="consultexp" (submit)="saveQues()">
+      <mat-card class="example-card">
+        <!-- <mat-form-field  appearance="outline">
+          <input matInput  formControlName="userid">
+        </mat-form-field> -->
+        <mat-form-field class="ques" appearance="outline">
+          <mat-label>Post your question</mat-label>
+         
+          <textarea matInput formControlName="question"></textarea>
+        </mat-form-field>
+        <button class="btn btn-primary" type="submit" id="postbtn">Post</button>
+      </mat-card>
+    </form>
+  </div>
+  
+  <mat-card class="example-card2">
+    <mat-card-header>
+      <mat-card-title>Responses</mat-card-title>
+      <mat-card-subtitle>from experts</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content> 
+      <div *ngFor="let x of questions">
+        <app-question *ngIf="x.uid==uid" [ques]="x"></app-question>
+      </div>
+  
+     </mat-card-content>
+  
     </mat-card>
-  </form>
+
 </div>
-
-<mat-card class="example-card2">
-  <mat-card-header>
-    <mat-card-title>Responses</mat-card-title>
-    <mat-card-subtitle>from experts</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content> 
-    <div *ngFor="let x of questions">
-      <app-question *ngIf="x.uid==uid" [ques]="x"></app-question>
-    </div>
-
-   </mat-card-content>
-
-</mat-card>
+  

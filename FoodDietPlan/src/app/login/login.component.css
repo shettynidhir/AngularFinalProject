@@ -17,6 +17,11 @@ mat-form-field
     /* border:2px solid black; */
     display: flex;
 }
+img
+{
+   margin-top: 180px;
+   margin-left: 180px; 
+}
 
 mat-card
 {
@@ -34,6 +39,11 @@ margin-left:100px;
     height:100%;
 
 }
+/* .imgdisp
+{
+    border: 2px solid black;
+    height: fit;
+} */
 .below
 {
     margin-top:10px;

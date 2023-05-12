@@ -10,6 +10,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResponseComponent } from './response/response.component';
 import { RespchildComponent } from './response/respchild/respchild.component';
+import { DispProdComponent } from './home/disp-prod/disp-prod.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RespchildComponent } from './response/respchild/respchild.component';
     AdminmenuComponent,
     HomeComponent,
     RespchildComponent,
-    ResponseComponent
+    ResponseComponent,
+    DispProdComponent
   ],
   imports: [
     CommonModule,

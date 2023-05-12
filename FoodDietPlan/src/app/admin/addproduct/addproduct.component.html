@@ -7,7 +7,7 @@
             <input matInput placeholder="Name of the product" formControlName="Food">
           </mat-form-field>
           <mat-form-field class="dropdown" appearance="fill">
-              <mat-label>Filter by Cateogry</mat-label>
+              <mat-label>Choose Cateogry</mat-label>
               <mat-select formControlName="Category">
                 <mat-option *ngFor="let x of types" [value]="x">
                   {{x}}

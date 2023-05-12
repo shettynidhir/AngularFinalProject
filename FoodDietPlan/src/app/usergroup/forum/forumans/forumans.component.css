@@ -1,24 +1,8 @@
 .ques
 {
     width:500px;
-    margin-top: 50px;
+    margin-top: auto;
     /* border: 2px solid red; */
-}
-
-.conform
-{
-    display: flex;
-    flex-direction: column;
-   
-}
-#postbtn
-{
-    width:100px;
-}
-mat-card-header
-{
-    display: flex;
-    justify-content: center;
 }
 .example-card {
   
@@ -27,8 +11,6 @@ mat-card-header
     padding:20px;
    
   }
-  
-
   .product_card
 {
     float: left;
@@ -36,19 +18,14 @@ mat-card-header
     height: fit-content;
     box-sizing: border-box;
     margin: 20px;
-    margin-left:350px;
+    /* margin-left:350px; */
     cursor: pointer;
     margin-top: 30px;
     display: flex;
     align-items: center;
     
 }
-.example-card2
+.main
 {
-    width:100%;
-    height: fit-content;
-}
-.card
-{
-    background-color: black;
+    display:flex;
 }

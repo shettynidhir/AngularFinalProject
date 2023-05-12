@@ -21,8 +21,6 @@ export class MenubarComponent {
 
  logout():void
  {
-  
-   
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("name");
     sessionStorage.removeItem("usertype");

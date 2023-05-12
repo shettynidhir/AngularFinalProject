@@ -28,7 +28,7 @@ answers:any;
 
   });
   this.uid=sessionStorage.getItem('userid');
-console.log("Uid", this.uid) 
+  console.log("Uid", this.uid) 
   this.ms.getQuestion().subscribe(
     {
       next:(data:any)=>

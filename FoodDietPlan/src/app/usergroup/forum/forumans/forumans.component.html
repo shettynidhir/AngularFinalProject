@@ -1,0 +1,24 @@
+<div *ngFor="let x of answers">
+    <div *ngIf="this.id==x.qid">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{x.uname}}</mat-card-title>
+            <mat-card-subtitle>{{x.cdate | date:'medium'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+                    <p>{{x.answer}}</p>
+               
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>
+   
+    <div class="product_card">
+        <form [formGroup]="forumans" (submit)="saveAns()">
+           <mat-form-field class="ques" appearance="outline">
+              <mat-label>Post your answers</mat-label> 
+              <textarea matInput formControlName="answer"></textarea>
+            </mat-form-field>
+            <button style="margin-left:20px" class="btn btn-primary" type="submit" id="postbtn">Post</button> 
+        </form>
+      </div> 

@@ -1,6 +1,10 @@
 <div class="main" *ngIf="logform">
   <div class="one">
+    <div class="imgdisp">
+      <img src="http://localhost/logo.png" >
 
+    </div>
+   
   </div>
   <div class="two">
     <mat-card>
@@ -61,7 +65,6 @@
       </mat-form-field>
 
 
-
         <mat-form-field appearance="outline">
           <input [(ngModel)]="rpass" placeholder="Set Password" matInput [type]="hide ? 'password' : 'text'">
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
@@ -75,8 +78,6 @@
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
         </mat-form-field>
-
-
         <button class="btn btn-primary" (click)="register()" type="submit" id="postbtn">Register</button>
   </mat-card>
   

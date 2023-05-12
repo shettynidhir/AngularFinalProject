@@ -1,43 +1,76 @@
 <app-menubar></app-menubar>
+
 <div class="division">
-    <div class="dropdown">
-        <mat-form-field appearance="fill">
-            <mat-label>Select Products</mat-label>
-            <mat-select [(ngModel)]="selected">
-              <mat-option *ngFor="let x of products" [value]="x.Food">
-                {{x.Food}}
-              </mat-option>
-            </mat-select>
-        </mat-form-field>
-        
-    </div>
-    <div class="dropdown">
-        <mat-form-field class="quandrp" appearance="fill">
-            <mat-label>Select Quantity</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let x of quantity" [value]="x">
-                {{x}}
-              </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <div class="btn">
-        <button class="btn btn-primary" id="postbtn">Calculate</button>
-    </div>
-    
-   
+  <div class="dropdown">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Products</mat-label>
+      <mat-select [(ngModel)]="selectprod">
+        <mat-option *ngFor="let x of products" [value]="x.Food">
+          {{x.Food}}
+
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+  <div class="dropdown">
+    <mat-form-field class="quandrp" appearance="fill">
+      <mat-label>Enter Quantity </mat-label>
+      <input matInput [(ngModel)]="quan" placeholder="in grams">
+
+    </mat-form-field>
+  </div>
+  <div class="btn">
+    <button class="btn btn-primary" (click)="calc()" id="postbtn">Add</button>
+  </div>
+
+
 </div>
 
-    <div class="prdisp" *ngFor="let x of products">
-        <app-disp-prod *ngIf="x.Food==selected"  [prod]="x"></app-disp-prod>
+<div class="display">
+  <mat-card class="dispcard">
+    <div class="title">
+      <mat-card-title>Products</mat-card-title>
+      <mat-card-title style="margin-left: 50px;">Quantity</mat-card-title>
     </div>
-    
-       
-        
-    
 
+    <mat-card-content> 
+        <table class="table">
 
+        <tbody>
+          <tr>
+            <td>
+              <div *ngFor="let x of selected">
+                {{x}}
+              </div>
+            </td>
+            <td>
+              <div *ngFor="let y of quantity">
+                {{y}} gm
+              </div>
+            </td>
+          </tr>
+             
+          
+          
+         
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
 
-
-
- 
+  <div class="nut">
+    <mat-card class="dispcard1">
+      <mat-card-title>Nutritional Value</mat-card-title>
+      <mat-card-content>
+        <p>Calories: {{this.calorie}}</p>
+        <p> Protein: {{this.protein}}</p>
+        <p>Fat: {{this.fat}}</p>
+        <p>SatFat: {{this.satfat}}</p>
+        <p> Fiber: {{this.fiber}}</p>
+        <p> Carbs: {{this.carbs}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+</div>

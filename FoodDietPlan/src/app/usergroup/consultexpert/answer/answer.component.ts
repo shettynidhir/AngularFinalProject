@@ -21,7 +21,7 @@ answer:any;
  {
   // console.log(this.data.id)
   this.id=this.data.id;
-  console.log("ID ans: ",this.id)
+  // console.log("ID ans: ",this.id)
   this.ms.getAnswers().subscribe(
         {
           next:(data:any)=>{this.answers=data

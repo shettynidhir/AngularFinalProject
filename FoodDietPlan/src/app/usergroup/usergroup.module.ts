@@ -19,6 +19,9 @@ import { QuestionComponent } from './consultexpert/question/question.component';
 import { AnswerComponent } from './consultexpert/answer/answer.component';
 import { PlandietComponent } from './plandiet/plandiet.component';
 import { DispProdComponent } from './plandiet/disp-prod/disp-prod.component';
+import { ForumComponent } from './forum/forum.component';
+import { ForumboxComponent } from './forum/forumbox/forumbox.component';
+import { ForumansComponent } from './forum/forumans/forumans.component';
 
 
 
@@ -41,8 +44,11 @@ import { DispProdComponent } from './plandiet/disp-prod/disp-prod.component';
     AnswerComponent,
    
    PlandietComponent,
-       DispProdComponent
-  
+       DispProdComponent,
+       ForumComponent,
+       ForumboxComponent,
+       ForumansComponent,
+     
     
  
    
@@ -53,6 +59,7 @@ import { DispProdComponent } from './plandiet/disp-prod/disp-prod.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+  
    
   
 

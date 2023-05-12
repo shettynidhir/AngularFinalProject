@@ -50,6 +50,20 @@ export class MainserviceService {
   return this.http.post("http://localhost:4500/quesans",obj,this.httpOptions);
  }
 
+ postComments(obj:any):Observable<any>{
+
+  this.httpOptions =  new HttpHeaders({
+    'Content-Type': 'application/json',
+  })
+return this.http.post("http://localhost:4500/forum",obj,this.httpOptions);
+}
+getComments():Observable<any>
+{
+  return this.http.get("http://localhost:4500/forum")
+}
+
+
+
  postProduct(obj:any):Observable<any>{
 
   this.httpOptions =  new HttpHeaders({
@@ -57,6 +71,14 @@ export class MainserviceService {
   })
 
 return this.http.post("http://localhost:4500/foodproducts",obj,this.httpOptions);
+}
+postResponses(obj:any):Observable<any>{
+
+  this.httpOptions =  new HttpHeaders({
+    'Content-Type': 'application/json',
+  })
+
+return this.http.post("http://localhost:4500/forumans",obj,this.httpOptions);
 }
 
 
@@ -98,6 +120,12 @@ getQuestion():Observable<any>
 getAnswers():Observable<any>
 {
   return this.http.get("http://localhost:4500/answers")
+ 
+}
+
+getResponses():Observable<any>
+{
+  return this.http.get("http://localhost:4500/forumans")
  
 }
 // getCredentials():Observable<any>

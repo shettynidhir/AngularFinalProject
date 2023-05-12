@@ -2,12 +2,12 @@
 {
     width:100%;
     height: fit-content;
+    
    
 }
 
-
 #postbtn
 {
-    width:150px;
+    width:fit-content;
     margin-top: 10px;
 }

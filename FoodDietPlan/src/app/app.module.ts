@@ -26,8 +26,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     MainmenuComponent,
     LoginComponent,
-  
-   
+ 
 
   ],
   imports: [
@@ -39,7 +38,9 @@ import { LoginComponent } from './login/login.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
